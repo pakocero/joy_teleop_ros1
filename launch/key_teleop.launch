@@ -1,0 +1,8 @@
+<launch>
+  <arg name="teleop_config" default="$(find turtlebot_teleop)/config/joy_config.yaml" />
+
+  <rosparam file="$(arg teleop_config)" command="load" />
+  
+  <node pkg="turtlebot_teleop" type="turtlebot_key_teleop_node" name="turtlebot_key_teleop" output="screen"/>
+
+</launch>
